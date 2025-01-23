@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'nodejs'
+    static_configs:
+      # Specify the target IP address and port where the Node.js application is running.
+      # Replace '192.168.1.101:3000' with the actual IP address and port of your Node.js application.
+      - targets: ['192.168.1.101:3000']
+    metrics_path: '/metrics'
